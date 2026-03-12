@@ -5,7 +5,7 @@ function Loader() {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
       <img src={imgLogo} alt="" className="w-12 h-12 animate-spin" />
-      <p className="text-3xl font-bold">Caricamento in corso...</p>
+      <p className="text-3xl font-bold text-center">Caricamento in corso...</p>
     </div>
   );
 }
