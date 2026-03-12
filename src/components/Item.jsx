@@ -6,7 +6,10 @@ function Item({ item }) {
 
   return (
     <>
-      <div onClick={() => setIsOpen(true)}>
+      <div
+        onClick={() => setIsOpen(true)}
+        className="border-2 rounded-2xl flex flex-col"
+      >
         <div className="w-12 h-12">
           <img src={item.image_url} alt={item.name} />
         </div>
