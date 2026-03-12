@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import ItemsList from "./components/ItemsList";
 import CategoryButtons from "./components/CategoryButtons";
 import FilterBar from "./components/FilterBar";
+import Loader from "./components/Loader";
 
 function App() {
   const [data, setData] = useState(null);
@@ -55,7 +56,7 @@ function App() {
       <div className="bg-amber-900/40 backdrop-blur-md rounded-2xl p-4 flex flex-col flex-1 overflow-hidden border border-amber-600/30">
         <CategoryButtons setCategory={setCategory} setLoading={setLoading} />
         <FilterBar searchText={searchText} setSearchText={setSearchText} />
-        {loading && category && <p>Caricamento...</p>}
+        {loading && category && <Loader />}
         {!loading && (
           <div className="flex-1 overflow-y-auto">
             {(category === "fish" || category === "bugs") && (
