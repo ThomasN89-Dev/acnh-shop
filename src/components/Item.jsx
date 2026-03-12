@@ -8,13 +8,13 @@ function Item({ item }) {
     <>
       <div
         onClick={() => setIsOpen(true)}
-        className="border-2 rounded-2xl flex flex-col"
+        className="border-2 rounded-2xl flex flex-col items-center justify-center p-2"
       >
         <div className="w-12 h-12">
           <img src={item.image_url} alt={item.name} />
         </div>
-        <p>{item.name}</p>
-        <p>{item.location}</p>
+        <p className="font-bold text-2xl">{item.name}</p>
+        <p className="text-xl">Posizione - {item.location}</p>
       </div>
 
       {isOpen && <ItemModal item={item} setIsOpen={setIsOpen} />}
