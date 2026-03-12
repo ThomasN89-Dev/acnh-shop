@@ -51,15 +51,17 @@ function App() {
   }, [data, searchText]);
 
   return (
-    <div className="bg-amber-700 w-full h-screen overflow-hidden p-4 flex flex-col">
-      <CategoryButtons setCategory={setCategory} setLoading={setLoading} />
-      <FilterBar searchText={searchText} setSearchText={setSearchText} />
-      {loading && category && <p>Caricamento...</p>}
-      {!loading && (
-        <div className="flex-1 overflow-y-auto">
-          <ItemsList items={filteredResults} />
-        </div>
-      )}
+    <div className="bg-amber-700 w-full h-screen p-4 flex flex-col">
+      <div className="bg-amber-900/40 backdrop-blur-md rounded-2xl p-4 flex flex-col flex-1 overflow-hidden border border-amber-600/30">
+        <CategoryButtons setCategory={setCategory} setLoading={setLoading} />
+        <FilterBar searchText={searchText} setSearchText={setSearchText} />
+        {loading && category && <p>Caricamento...</p>}
+        {!loading && (
+          <div className="flex-1 overflow-y-auto">
+            <ItemsList items={filteredResults} />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
