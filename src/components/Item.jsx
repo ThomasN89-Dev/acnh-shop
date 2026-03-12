@@ -14,7 +14,7 @@ function Item({ item }) {
           <img src={item.image_url} alt={item.name} />
         </div>
         <p className="font-bold text-2xl">{item.name}</p>
-        <p className="text-xl">Posizione - {item.location}</p>
+        <p className="text-xl text-center">Posizione - {item.location}</p>
       </div>
 
       {isOpen && <ItemModal item={item} setIsOpen={setIsOpen} />}
