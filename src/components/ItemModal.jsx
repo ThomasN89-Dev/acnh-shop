@@ -1,6 +1,8 @@
-import React from "react";
+import MonthCalendar from "./MonthArray";
 
 function ItemModal({ setIsOpen, item }) {
+  const monthArray = item.north.months_array;
+  const timesByMonth = item.north.times_by_month;
   return (
     <div
       className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
@@ -20,7 +22,7 @@ function ItemModal({ setIsOpen, item }) {
         <p>Prezzo Nook: {item.sell_nook}</p>
         {item.sell_cj && <p>Prezzo CJ - {item.sell_cj}</p>}
         {item.sell_flick && <p>Prezzo Flick - {item.sell_flick}</p>}
-        {/* aggiungi altri campi che vuoi */}
+        <MonthCalendar monthArray={monthArray} timesByMonth={timesByMonth} />
         <button
           className="mt-4 w-full bg-amber-700 text-white rounded-xl py-2"
           onClick={() => setIsOpen(false)}
