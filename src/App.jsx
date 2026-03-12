@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
-import ItemsList from "./components/ItemsList";
 import CategoryButtons from "./components/CategoryButtons";
 import FilterBar from "./components/FilterBar";
 import Loader from "./components/Loader";
+import FishAndBugsList from "./components/FIshAndBugsList";
+import VillagerList from "./components/VillagerList";
 
 function App() {
   const [data, setData] = useState(null);
@@ -60,7 +61,10 @@ function App() {
         {!loading && (
           <div className="flex-1 overflow-y-auto">
             {(category === "fish" || category === "bugs") && (
-              <ItemsList items={filteredResults} />
+              <FishAndBugsList items={filteredResults} />
+            )}
+            {category === "villagers" && (
+              <VillagerList items={filteredResults} />
             )}
           </div>
         )}

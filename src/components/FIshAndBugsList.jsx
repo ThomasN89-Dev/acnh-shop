@@ -1,6 +1,6 @@
 import Item from "./Item";
 
-function ItemsList({ items }) {
+function FishAndBugsList({ items }) {
   return (
     <ul className=" overflow-auto flex flex-col gap-3">
       {items.map((item) => {
@@ -10,4 +10,4 @@ function ItemsList({ items }) {
   );
 }
 
-export default ItemsList;
+export default FishAndBugsList;
