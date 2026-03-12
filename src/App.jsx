@@ -51,11 +51,15 @@ function App() {
   }, [data, searchText]);
 
   return (
-    <div className="bg-amber-700 w-full h-screen overflow-hidden p-4">
+    <div className="bg-amber-700 w-full h-screen overflow-hidden p-4 flex flex-col">
       <CategoryButtons setCategory={setCategory} setLoading={setLoading} />
       <FilterBar searchText={searchText} setSearchText={setSearchText} />
       {loading && category && <p>Caricamento...</p>}
-      {!loading && <ItemsList items={filteredResults} />}
+      {!loading && (
+        <div className="flex-1 overflow-y-auto">
+          <ItemsList items={filteredResults} />
+        </div>
+      )}
     </div>
   );
 }
