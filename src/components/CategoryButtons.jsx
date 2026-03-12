@@ -10,6 +10,7 @@ function CategoryButtons({ setCategory, setLoading }) {
       {ButtonCategories.map((button) => {
         return (
           <button
+            key={button.value}
             onClick={() => {
               (setCategory(button.value), setLoading(true));
             }}

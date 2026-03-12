@@ -1,10 +1,10 @@
-import React from "react";
+import Item from "./Item";
 
 function ItemsList({ items }) {
   return (
     <ul className=" overflow-auto">
       {items.map((item) => {
-        return <li key={item.number}>{item.name}</li>;
+        return <Item item={item} key={item.name} />;
       })}
     </ul>
   );

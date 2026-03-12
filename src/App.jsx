@@ -58,7 +58,9 @@ function App() {
         {loading && category && <p>Caricamento...</p>}
         {!loading && (
           <div className="flex-1 overflow-y-auto">
-            <ItemsList items={filteredResults} />
+            {(category === "fish" || category === "bugs") && (
+              <ItemsList items={filteredResults} />
+            )}
           </div>
         )}
       </div>
