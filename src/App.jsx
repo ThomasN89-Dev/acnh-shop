@@ -63,9 +63,9 @@ function App() {
             {(category === "fish" || category === "bugs") && (
               <FishAndBugsList items={filteredResults} />
             )}
-            {category === "villagers" && (
+            {/* {category === "villagers" && (
               <VillagerList items={filteredResults} />
-            )}
+            )} */}
           </div>
         )}
       </div>

@@ -9,11 +9,11 @@ const ButtonCategories = [
     text: "Insetti",
     img: "https://dodo.ac/np/images/4/44/Brown_Cicada_NH_Icon.png",
   },
-  {
-    value: "villagers",
-    text: "Villagers",
-    img: "https://dodo.ac/np/images/7/7d/Freckles_NH.png",
-  },
+  // {
+  //   value: "villagers",
+  //   text: "Villagers",
+  //   img: "https://dodo.ac/np/images/7/7d/Freckles_NH.png",
+  // },
 ];
 
 function CategoryButtons({ setCategory, setLoading }) {
@@ -32,9 +32,9 @@ function CategoryButtons({ setCategory, setLoading }) {
               {(button.value === "fish" || button.value === "bugs") && (
                 <img src={button.img} alt={button.text} className="w-10 h-10" />
               )}
-              {button.value === "villagers" && (
+              {/* {button.value === "villagers" && (
                 <img src={button.img} alt={button.text} className="w-6 h-10" />
-              )}
+              )} */}
               {button.text}
             </div>
           </button>
